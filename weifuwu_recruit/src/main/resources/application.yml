@@ -1,0 +1,13 @@
+server: 
+  port: 9002
+spring: 
+  application:  
+    name: weifuwu-recruit #指定服务名
+  datasource:  
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/lianxi?characterEncoding=UTF8
+    username: root
+    password: root
+  jpa: 
+    database: MySQL
+    show-sql: true

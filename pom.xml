@@ -10,12 +10,13 @@
     <modules>
         <module>weifuwu_common</module>
         <module>weifuwu_base</module>
+        <module>weifuwu_recruit</module>
     </modules>
 
     <packaging>pom</packaging>
 
     <name>weifuwu_parent</name>
-    <description>联系项目</description>
+    <description>练习项目</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
