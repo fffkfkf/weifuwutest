@@ -9,29 +9,30 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>weifuwu_base</artifactId>
-
+    <artifactId>weifuwu_recruit</artifactId>
 
     <dependencies>
-        <!--SpringDataJpa-->
-
-        <!--mysql驱动-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-        <!--公共子模块-->
         <dependency>
             <groupId>com.dell</groupId>
             <artifactId>weifuwu_common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+
+
         <!-- eureka  客户端-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
-
     </dependencies>
+
 
 </project>
