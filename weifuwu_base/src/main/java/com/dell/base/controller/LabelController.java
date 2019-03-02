@@ -24,7 +24,7 @@ public class LabelController {
         String a=labelService.findAll();
         System.out.println(a);
         // 返回结果
-        return new Result(true, StatusCode.OK,"查询成功");
+        return new Result(true, StatusCode.OK,"LabelController查询成功");
     }
 
 

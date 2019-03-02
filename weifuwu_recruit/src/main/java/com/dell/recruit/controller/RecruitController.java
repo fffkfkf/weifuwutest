@@ -1,13 +1,20 @@
 package com.dell.recruit.controller;
 
+import com.dell.recruit.client.LabelClient;
 import entity.Result;
 import entity.StatusCode;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin
 @RequestMapping("/recruit")
 public class RecruitController {
+
+ @Autowired
+ private LabelClient labelClient;
+
+
  /**
   * 根据ID查询
   *
@@ -21,5 +28,16 @@ public class RecruitController {
 
  }
 
-
+ /**
+  * 实现feign的调用
+  * @param
+  * @return
+   */
+ @RequestMapping(value = "/label",method = RequestMethod.POST)
+ public Result findAll() {// http://localhost:9002/recruit/label
+  //System.out.println(labelId);
+  Result r = labelClient.findAll();
+  System.out.println("findAll方法执行了");
+  return r;
+ }
 }

@@ -9,7 +9,9 @@
         <module name="weifuwu_base" />
         <module name="weifuwu_common" />
         <module name="weifuwu_eureka" />
+        <module name="weifuwu_manager" />
         <module name="weifuwu_recruit" />
+        <module name="weifuwu_web" />
       </profile>
     </annotationProcessing>
   </component>

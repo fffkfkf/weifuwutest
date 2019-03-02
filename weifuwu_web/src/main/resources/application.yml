@@ -1,0 +1,17 @@
+server:
+  port: 9012
+spring:
+  application:
+    name: weifuwu‐web #指定服务名
+eureka:
+  client:
+    serviceUrl: #Eureka客户端与Eureka服务端进行交互的地址
+      defaultZone: http://127.0.0.1:6868/eureka/
+zuul:
+  routes:
+    weifuwu-base: #基础
+      path: /base/** #配置请求URL的请求规则
+      serviceId: weifuwu-base #指定Eureka注册中心中的服务id
+    weifuwu-recruit: #招聘
+      path: /recruit/** #配置请求URL的请求规则
+      serviceId: weifuwu-recruit #指定Eureka注册中心中的服务id

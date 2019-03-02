@@ -12,6 +12,8 @@
         <module>weifuwu_base</module>
         <module>weifuwu_recruit</module>
         <module>weifuwu_eureka</module>
+        <module>weifuwu_manager</module>
+        <module>weifuwu_web</module>
     </modules>
 
     <packaging>pom</packaging>
