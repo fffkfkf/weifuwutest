@@ -14,6 +14,7 @@
         <module>weifuwu_eureka</module>
         <module>weifuwu_manager</module>
         <module>weifuwu_web</module>
+        <module>weifuwu_config</module>
     </modules>
 
     <packaging>pom</packaging>

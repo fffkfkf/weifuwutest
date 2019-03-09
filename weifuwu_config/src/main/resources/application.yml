@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: weifuwu-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/fffkfkf/weifuwu-config.git
+server:
+  port: 12000
+eureka:
+  client:
+    serviceUrl: #Eureka客户端与Eureka服务端进行交互的地址
+      defaultZone: http://localhost:6868/eureka
