@@ -10,6 +10,8 @@ public class LabelClientImpl implements LabelClient {
 
  @Override
  public Result findAll() {
+
   return new Result(false, StatusCode.ERROR,"熔断器启动了");
+
  }
 }

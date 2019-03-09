@@ -29,7 +29,7 @@ public class RecruitController {
  }
 
  /**
-  * 实现feign的调用
+  * 实现feign的调用, reruit 模块调用base模块的findAll方法.
   * @param
   * @return
    */
