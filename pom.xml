@@ -25,7 +25,8 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.1.RELEASE</version>
+        <!--  因为eureka 问题,修改版本 -->
+        <version>1.5.2.RELEASE</version>
         <relativePath/>
     </parent>
 
@@ -42,7 +43,8 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Finchley.M9</version>
+                <!--  因为eureka 问题,修改版本 -->
+                <version>Edgware.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
