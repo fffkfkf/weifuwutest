@@ -44,7 +44,7 @@ public class TestLambda3 {
 	public void test3(){
 		Function<Integer, Double> fun = (a) -> Math.sqrt(a);
 		Double d = fun.apply(100);
-		System.out.println(d);
+		System.out.println(fun);
 	}
 	
 	@Test
