@@ -15,16 +15,21 @@ import java.util.concurrent.Semaphore;
  * @date 2019/12/29
  * 版权：Copyright 2000-2001 si-tech.com.cn  All Rights Reserved.
  */
-public class PressureTest {
-    Logger log = LogManager.getLogger(PressureTest.class);
+public class PressureTestunsafe2 {
+
+    Logger log = LogManager.getLogger(PressureTestunsafe2.class);
     // 请求总数
-    public static int clientTotal = 20;
+    public static int clientTotal = 2000;
 
     // 同时并发执行的线程数
-    public static int threadTotal = 4;
+    public static int threadTotal = 400;
 
     public static int count = 0;
 
+    /**
+     *没有synchonize也会产生并发问题：  count总数:{}1991,
+     * @throws Exception
+     */
     @Test
     public void main11() throws Exception {
         ExecutorService executorService = Executors.newCachedThreadPool();
@@ -37,9 +42,7 @@ public class PressureTest {
                 try {
                     semaphore.acquire();
                     add();
-                    // 模拟随机执行时长
-                    Thread.sleep(new Random().nextInt(55));
-                    log.info("2count:{}"+ count);
+                    //log.info("2count:{}"+ count);
                     semaphore.release();
                 } catch (Exception e) {
                     log.error("exception", e);
@@ -49,13 +52,12 @@ public class PressureTest {
         }
         countDownLatch.await();
         executorService.shutdown();
-        log.info("count:{}"+ count);
+        log.info("count总数:{}"+ count);
     }
 
-    private synchronized  void add() {
-        log.info("1count:{}"+ count);
+    private  void add() {
+        //log.info("1count:{}"+ count);
         count++;
     }
-
 
 }
