@@ -42,9 +42,11 @@ public class TestLambda3 {
 	
 	@Test
 	public void test3(){
+	    //      参数，      返回值               此fun函数的具体实现
 		Function<Integer, Double> fun = (a) -> Math.sqrt(a);
 		Double d = fun.apply(100);
 		System.out.println(fun);
+		System.out.println(d);
 	}
 	
 	@Test

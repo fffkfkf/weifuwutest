@@ -25,7 +25,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <!--  因为eureka 问题,修改版本 -->
+        <!--  因为eureka 问题,修改版本 . 目前大多数企业应该稳定版本在1.5.x。   -->
         <version>1.5.2.RELEASE</version>
         <relativePath/>
     </parent>

@@ -114,22 +114,22 @@ public class TestMethodRef {
 		Supplier<Employee> sup = () -> new Employee();
 		System.out.println(sup.get());
 
-		System.out.println("--------------------------------------");
+		System.out.println("1--------------------------------------");
 
 		Supplier<Employee> sup2 = Employee::new;
 		System.out.println(sup2.get());
 
-		System.out.println("--------------------------------------");
+		System.out.println("2--------------------------------------");
 
 		Function<String, Employee> fun = (name) -> new Employee(name);
 
-		System.out.println("--------------------------------------");
+		System.out.println("3--------------------------------------");
 
 		Function<String, Employee> fun2 = Employee::new;
 		Employee emp = fun2.apply("张三");
 		System.out.println(emp.getName());
 
-		System.out.println("---------------------------------------");
+		System.out.println("4---------------------------------------");
 
 		BiFunction<Integer, Integer, Employee> bf = Employee::new;
 	}
