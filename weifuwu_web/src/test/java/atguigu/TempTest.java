@@ -19,9 +19,7 @@ public class TempTest {
 
     public static void main(String[] args) {
 
-        boolean bitOn = isBitOn(0L, 16);
-        System.out.println(bitOn);
-
+        System.out.println(9>>1);
 
     }
     //   src=0, bitSeq=16
