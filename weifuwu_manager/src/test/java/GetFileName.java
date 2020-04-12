@@ -15,8 +15,10 @@ public class GetFileName {
     @Test
     public void test1() {
         //路径   这里写一个路径进去
-        String path = "D:\\11siteqiwork\\jcf315cailiao\\新建文件夹\\33其它\\331过程文档";
-        //调用方法
+        String path = "D:\\11siteqiwork\\sitechSvn2\\03概要设计\\32概要设计说明书\\建表脚本\\mysql\\单据\\实例表\\正表";
+
+        //调用方法      D:\11siteqiwork\jcf315cailiao\新建文件夹\33其它\331过程文档
+
         getFiles(path);
     }
 
