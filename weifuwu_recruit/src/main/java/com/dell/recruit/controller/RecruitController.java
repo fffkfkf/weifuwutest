@@ -47,12 +47,11 @@ public class RecruitController {
     }
 
     @RequestMapping(value = "/labela", method = RequestMethod.POST)
-    public Result findAlla(HttpServletRequest request) {// http://localhost:9002/recruit/label
+    public Result findAlla(HttpServletRequest request) {  // http://localhost:9002/recruit/label
         //System.out.println(labelId);
-     HttpSession session = request.getSession();
-     Enumeration<String> attributeNames = session.getAttributeNames();
-
-     Result r = labelClient.findAll();
+        HttpSession session = request.getSession();
+        Enumeration<String> attributeNames = session.getAttributeNames();
+        Result r = labelClient.findAll();
         System.out.println("findAll方法执行了");
         return r;
     }
