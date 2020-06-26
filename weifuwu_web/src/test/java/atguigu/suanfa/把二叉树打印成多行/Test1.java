@@ -24,12 +24,15 @@ public class Test1 {
      /*   treeNode.left=treeNode2;
         treeNode.right=treeNode3;*/
 
-        Solution2 solution1 = new Solution2();
-        ArrayList<ArrayList<Integer>> print = solution1.Print(listNode);
+        Solution2 solution2 = new Solution2();
+        ArrayList<ArrayList<Integer>> print = solution2.Print(listNode);
 
         System.out.println(print.toString());
         //[[1], [3, 2], [4, 5]]
-
+//        Solution solution1 = new Solution();
+//        ArrayList<ArrayList<Integer>> print = solution1.Print(listNode);
+//
+//        System.out.println(print.toString());
 
     }
 

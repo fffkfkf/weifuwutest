@@ -12,27 +12,30 @@ public class Test1 {
     @Test
     public void test1(){
         TreeNode listNode = new TreeNode(1);
-        TreeNode treeNode = new TreeNode(2);
-        TreeNode treeNode1 = new TreeNode(3);
+
+        TreeNode treeNode1 = new TreeNode(2);
+        TreeNode treeNode12 = new TreeNode(3);
+
+        TreeNode treeNode21 = new TreeNode(7);
+        TreeNode treeNode22 = new TreeNode(8);
   /*      TreeNode treeNode2 = new TreeNode(4);
         TreeNode treeNode3 = new TreeNode(5);*/
-        listNode.left= treeNode;
-        listNode.right=treeNode1;
-     /*   treeNode.left=treeNode2;
-        treeNode.right=treeNode3;*/
+        listNode.left= treeNode1;
+        listNode.right=treeNode12;
 
-        Solution solution1 = new Solution();
-        ArrayList<ArrayList<Integer>> print = solution1.Print(listNode);
+        treeNode1.left=treeNode21;
+        treeNode1.right=treeNode22;
 
-        System.out.println(print.toString());
+//        Solution solution1 = new Solution();
+//        ArrayList<ArrayList<Integer>> print = solution1.Print(listNode);
+//        System.out.println(print.toString());
         //[[1], [3, 2], [4, 5]]
+        System.out.println("----------------");
 
-        ArrayList<Integer> list=new ArrayList<>();
-        list.add(0);
-        list.add(1);
-        list.add(2);
-        list.add(0,0);
-        System.out.println(list.toString());
+        Solution2 solution2 = new Solution2();
+        ArrayList<ArrayList<Integer>> print2 = solution2.Print(listNode);
+        System.out.println(print2.toString());
+
     }
 
 }
