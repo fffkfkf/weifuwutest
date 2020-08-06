@@ -2,12 +2,21 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MyDesignDemo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MyDesignDemo/src/main/java/cn/dell/factory/simplefactory/pizza/CheesePizza.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MyDesignDemo/src/main/java/cn/dell/factory/simplefactory/pizza/GreekPizza.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MyDesignDemo/src/main/java/cn/dell/factory/simplefactory/pizza/PepperPizza.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/weifuwu_base" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/weifuwu_base/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/weifuwu_common" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/weifuwu_config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/weifuwu_common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/weifuwu_eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/weifuwu_eureka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/weifuwu_manager" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/weifuwu_manager/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/weifuwu_recruit" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/weifuwu_recruit/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/weifuwu_web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/weifuwu_web/src/main/java" charset="UTF-8" />
   </component>
 </project>

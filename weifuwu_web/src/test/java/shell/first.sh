@@ -1,7 +1,14 @@
 #!/usr/bin/env bash
-echo "Hello Worleeed -----------"
-for i in  `find /home/123/shell  -name "*.log"` ; do
-    tar -czf 20200620log.tar.gz $i
-done
+echo "11"
+case $1 in
+aa)
+  echo 'aa'
+  ;;
+bb)
+  echo 'bb'
+  ;;
 
-echo "Hello Worleeed ------------"
+* )
+  echo "Usage:{$0 momitor_log | archive_log |help}"
+  ;;
+esac

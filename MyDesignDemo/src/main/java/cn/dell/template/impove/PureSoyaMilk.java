@@ -6,6 +6,7 @@ package cn.dell.template.impove;
  * 版权：Copyright 2000-2001 si-tech.com.cn  All Rights Reserved.
  */
 public class PureSoyaMilk extends AbsSoyaMilk {
+
     @Override
     protected void addCondiments() {
         //空实现
