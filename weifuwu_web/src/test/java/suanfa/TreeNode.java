@@ -1,14 +1,14 @@
-package suanfa.对称的二叉树;
+package suanfa;
 
 /**
  * @author gmq
- * @date 2020/5/1
+ * @date 2020/8/7
  * 版权：Copyright 2000-2001 si-tech.com.cn  All Rights Reserved.
  */
 public class TreeNode {
-    int val = 0;
-    TreeNode left = null;
-    TreeNode right = null;
+    public int val = 0;
+   public TreeNode left = null;
+    public TreeNode right = null;
 
     public TreeNode(int val) {
         this.val = val;

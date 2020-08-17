@@ -1,6 +1,3 @@
-
-import org.springframework.jms.config.SimpleJmsListenerContainerFactory;
-
 import java.util.*;
 
 /**
@@ -12,22 +9,22 @@ import java.util.*;
 public class Ramdomtest {
 
     public static void main(String args[]) {
-int a,b,c;
 
+        List<String> list = new ArrayList<String>();
+        list.add("123");
+        list.add("456");
+        Object[] objects = list.toArray();
 
-        for (int i = 0; i < 1000; i++) {
-            for (int j = 0; j < 100; j++) {
-                for (int k = 0; k < 10; k++) {
-                    test(i, j, k);
-                }
-            }
-        }
+// array to list
+        String[] array = new String[]{"123","456"};
+        List<String> strings = Arrays.asList(array);
+
+        Queue queue = new ArrayDeque<Runnable>();
+        queue.add(22);
+        queue.poll();
+        queue.remove();
+
     }
-
-    private static void test(int i, int j, int k) {
-
-    }
-
 
 }
 

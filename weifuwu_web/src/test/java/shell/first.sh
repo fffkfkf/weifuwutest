@@ -12,3 +12,4 @@ bb)
   echo "Usage:{$0 momitor_log | archive_log |help}"
   ;;
 esac
+

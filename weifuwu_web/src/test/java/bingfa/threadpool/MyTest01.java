@@ -1,4 +1,4 @@
-package atguigu.threadpool;
+package bingfa.threadpool;
 
 /**
  * 内置的线程池的简单使用. 要记住如何使用.
@@ -16,40 +16,45 @@ import java.util.concurrent.ThreadFactory;
  */
 public class MyTest01 {
     public static void main(String[] args) {
-        //test1();
-        test2();
+        test1();
+       // test2();
     }
+
     //练习newCachedThreadPool方法
     private static void test1() {
         //1:使用工厂类获取线程池对象
         ExecutorService es = Executors.newCachedThreadPool();
         //2:提交任务;
-        for (int i = 1; i <=10 ; i++) {
+        for (int i = 1; i <= 10; i++) {
             es.submit(new MyRunnable(i));
         }
     }
+
     private static void test2() {
         //1:使用工厂类获取线程池对象
         ExecutorService es = Executors.newCachedThreadPool(new ThreadFactory() {
-            int n=1;
+            int n = 1;
+
             @Override
             public Thread newThread(Runnable r) {
-                return new Thread(r,"自定义的线程名称"+n++);
+                return new Thread(r, "自定义的线程名称" + n++);
             }
         });
         //2:提交任务;
-        for (int i = 1; i <=10 ; i++) {
+        for (int i = 1; i <= 10; i++) {
             es.submit(new MyRunnable(i));
             // submit 和execute差不多.
             //es.execute(new MyRunnable(i+100));
         }
     }
 }
+
 /*
     任务类,包含一个任务编号,在任务中,打印出是哪一个线程正在执行任务
  */
-class MyRunnable implements Runnable{
-    private  int id;
+class MyRunnable implements Runnable {
+    private int id;
+
     public MyRunnable(int id) {
         this.id = id;
     }
@@ -58,6 +63,7 @@ class MyRunnable implements Runnable{
     public void run() {
         //获取线程的名称,打印一句话
         String name = Thread.currentThread().getName();
-        System.out.println(name+"执行了任务..."+id);
+        System.out.println(name + "执行了任务..." + id);
     }
 }
+
