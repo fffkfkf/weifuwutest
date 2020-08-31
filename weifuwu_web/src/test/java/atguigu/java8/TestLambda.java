@@ -9,6 +9,7 @@ public class TestLambda {
 	//原来的匿名内部类
 	@Test
 	public void test1(){
+
 		Comparator<String> com = new Comparator<String>() {
 			@Override
 			public int compare(String o1, String o2) {

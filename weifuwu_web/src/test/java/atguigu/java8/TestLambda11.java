@@ -1,13 +1,15 @@
-package atguigu.exer;
+package atguigu.java8;
 
 import atguigu.java8.Employee;
+import atguigu.java8.MyFunction;
+import atguigu.java8.MyFunction2;
 import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class TestLambda {
+public class TestLambda11 {
 	
 	
 	List<Employee> emps = Arrays.asList(

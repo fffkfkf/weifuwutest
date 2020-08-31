@@ -1,4 +1,4 @@
-package atguigu.exer;
+package atguigu.java8;
 
 @FunctionalInterface
 public interface MyFunction {
