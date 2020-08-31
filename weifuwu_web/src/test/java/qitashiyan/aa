@@ -1,0 +1,57 @@
+
+
+{
+  "ROOT": {
+    "HEADER": {
+      "POOL_ID": "31",
+      "DB_ID": "",
+      "CHANNEL_ID": "02",
+      "ROUTING": {
+        "ROUTE_KEY": "10",
+        "ROUTE_VALUE": "13988880001"
+      },
+      "TRACE_ID": "11*20170525094012105*0008**772266",
+      "PHONE_NO": "13988880001",
+      "KEEP_LIVE": "",
+      "SUB_TRACE_ID": "",
+      "PASSWORD": "",
+      "ENDUSRIP": "",
+      "USERNAME": "aaaaxp",
+      "CONTACT_ID": "",
+      "ENV_ID": ""
+    },
+    "BODY": {
+      "OPR_INFO": {
+        "LOGIN_NO": "aaaaxp",
+        "OP_CODE": "8000",
+        "UNI_ORDITM_KEY": "K17081900000040",
+        "PROVINCE_ID": "230000",
+        "NEED_INTER_PREOWEN": "0",
+        "OP_TIME": "20170819163012",
+        "NEED_INTER_TRANSFORM": "0",
+        "CREATE_TIME": "20170819163012",
+        "NEED_INTER_CHECK": "0",
+        "UNI_ORD_ID": "UO17081900000011",
+        "GROUP_ID": "",
+        "UNI_ORDITM_ID": "UI17081900000011"
+      },
+      "BUSI_INFO": {
+        "FOREIGN_TIME": "20170525094012",
+        "PAY_LIST": [
+          {
+            "PAY_MONEY": "1000",
+            "END_TIME": "",
+            "PAY_TYPE": "BC"
+          }
+        ],
+        "FOREIGN_SN": "self0520170525094012",
+        "PAY_NOTE": "自助终端微信支付13946372039缴费10元",
+        "PHONE_NO": "13988880001",
+        "CONTRACT_NO": "",
+        "PAY_METHOD": "i",
+        "PAY_PATH": "11",
+        "DELAY_RATE": "0"
+      }
+    }
+  }
+}

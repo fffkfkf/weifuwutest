@@ -1,7 +1,9 @@
 package qitashiyan;
 
+import bingfa.CreatThread1;
 import org.junit.Test;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 
 /**
@@ -30,6 +32,8 @@ public class Udjs {
         return aa;
     }
 
+
+    //反射使用:
     @Test
     public void fanshe() throws Exception {
 
@@ -39,13 +43,17 @@ public class Udjs {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        Object obj = clazz.getConstructor().newInstance();
+        // 根据是否有有参构造来定.
+        Constructor constructor = clazz.getConstructor();
+        CreatThread1 obj = (CreatThread1)constructor.newInstance();
 
-        Method method = clazz.getMethod("sss");
+        System.out.println(obj);
+       /* Method method = clazz.getMethod("sss");
 
         Object invoke = method.invoke(obj);
         System.out.println(22);
-        System.out.println(invoke);
+        System.out.println(invoke);*/
+
 
     }
 

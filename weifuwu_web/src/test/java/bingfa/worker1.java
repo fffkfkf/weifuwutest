@@ -1,6 +1,7 @@
 package bingfa;
 
 
+import com.alibaba.fastjson.JSON;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
@@ -16,5 +17,8 @@ public class worker1 extends Thread {
     public void run() {
         Thread.currentThread().setName("worker1--");
         log.info("worker1111");
+
+
+
     }
 }
