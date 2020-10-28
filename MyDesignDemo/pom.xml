@@ -11,5 +11,15 @@
 
     <artifactId>MyDesignDemo</artifactId>
 
+<dependencies>
+    <!-- Spring Boot Mybatis 依赖 -->
+    <dependency>
+        <groupId>org.mybatis.spring.boot</groupId>
+        <artifactId>mybatis-spring-boot-starter</artifactId>
+        <version>1.2.0</version>
+    </dependency>
+
+</dependencies>
+
 
 </project>

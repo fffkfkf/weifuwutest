@@ -14,25 +14,17 @@ import java.util.function.*;
  * 方法引用中引入了新的操作符 “::”，语法格式如下：
  * 
  * 1.对象的引用 :: 实例方法名
- * 
  * 2.类名 :: 静态方法名
- * 
  * 3.类名 :: 实例方法名
- * 
- * 
+ *
  * 方法引用的注意：
  * 	①方法引用的方法参数列表与返回值类型，需要与函数式接口中抽象方法的参数列表和返回值类型保持一致！
  *  ②若Lambda 的参数列表的第一个参数，是方法引用方法的调用者，第二个参数是方法引用方法的参数时(或无参数)。可以使用：ClassName::methodName
- * 
- * 
+ *
  * 二、构造器引用
- * 
  * 	格式：ClassName::new
- * 	
  * 	注意：构造器引用的参数列表，必须与函数式接口中抽象方法的参数列表保持一致！
- * 
  * 三、数组引用
- * 	
  * 	格式： type[]::new;
  * 
  * 
@@ -48,13 +40,16 @@ public class TestMethodRef {
 		
 		System.out.println("-----------------------------");
 		
-		//方法引用的方式
+		//实例方法名
 		Consumer<String> con2 = ps::println;
 		con2.accept("嘿嘿嘿");
-		
+
+		System.out.println("----111111----------");
 		Consumer<String> con3 = System.out::println;
+		con3.accept("hhh");
 	}
-	
+
+	//对象的引用 :: 实例方法名
 	@Test
 	public void test2(){
 		Employee emp = new Employee(101, "张三", 18, 9999.99);
@@ -82,8 +77,14 @@ public class TestMethodRef {
 		BiFunction<Integer, Integer, Integer> bf2 = Math::max;
 		System.out.println(bf2.apply(10, 20));
 
+		System.out.println("--------22-----------");
 		Supplier<Double> sup = Math::random;
 		System.out.println(sup.get());
+
+		double random = Math.random();
+		int i = (int) (random * 100);
+		System.out.println(i);
+		System.out.println(random);
 	}
 
 	//类名 :: 实例方法名
@@ -140,6 +141,9 @@ public class TestMethodRef {
 		Function<Integer, String[]> fun = String[]::new;
 		String[] strs = fun.apply(10);
 		System.out.println(strs.length);
+
+		String[] strings = new String[4];
+		System.out.println(strings.length);
 	}
 
 	@Test
@@ -151,10 +155,11 @@ public class TestMethodRef {
 				new Employee(104, "赵六", 8, 6666.66),
 				new Employee(105, "田七", 98, 8888.88)
 		);
-		
+
+		System.out.println("---1--------");
 		emps.stream()
 			.forEach((x) -> System.out.println(x));
-		
+		System.out.println("---2--------");
 		emps.stream()
 			.forEach(System.out::println);
 		

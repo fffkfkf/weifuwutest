@@ -47,35 +47,38 @@ public class TestLambda2 {
 	
 	@Test
 	public void test1(){
+		//原来:
 		Runnable r = new Runnable() {
-			
 			@Override
 			public void run() {
 				System.out.println("Hello World!");
 			}
 		};
-		
 		r.run();
 		
 		System.out.println("-------------------------------");
-		
 		//现在
 		Runnable r1 = () -> System.out.println("Hello Lambda!");
 		r1.run();
 	}
 
+	//一个参数
 	@Test
 	public void test2(){
 		Consumer<String> con = args -> System.out.println(args);
-		con.accept("我大尚硅谷威武！");
+		con.accept("我大呃呃呃呃威武！");
 	}
-	
+
+	//两个参数
 	@Test
 	public void test3(){
 		Comparator<Integer> com = (x, y) -> {
 			System.out.println("函数式接口！");
 			return Integer.compare(x, y);
 		};
+
+
+
 	}
 	
 	@Test

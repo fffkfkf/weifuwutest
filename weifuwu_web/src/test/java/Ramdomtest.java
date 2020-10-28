@@ -1,3 +1,6 @@
+import org.junit.Test;
+
+import java.io.File;
 import java.util.*;
 
 /**
@@ -8,8 +11,9 @@ import java.util.*;
  */
 public class Ramdomtest {
 
-    public static void main(String args[]) {
-
+    @Test
+    public  void main11() {
+        File file = new File("D:\\xinzhiyun\\base\\bootstrap.yml");
 
 
     }

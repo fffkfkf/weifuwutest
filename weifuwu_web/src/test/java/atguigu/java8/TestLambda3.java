@@ -39,7 +39,8 @@ public class TestLambda3 {
 			}
 		}
 	}
-	
+
+	//Function,有返回结果
 	@Test
 	public void test3(){
 	    //      参数，      返回值               此fun函数的具体实现
@@ -48,11 +49,11 @@ public class TestLambda3 {
 		System.out.println(fun);
 		System.out.println(d);
 	}
-	
+
+	//供给型接口Supplier<T>:返回类型为T的对象
 	@Test
 	public void test2(){
 		List<Integer> list = numHandler(() -> (int)(Math.random() * 100), 10);
-		
 		for (Integer n : list) {
 			System.out.println(n);
 		}
@@ -60,18 +61,17 @@ public class TestLambda3 {
 	
 	public List<Integer> numHandler(Supplier<Integer> sup, int num){
 		List<Integer> list = new ArrayList<>();
-		
 		for (int i = 0; i < num; i++) {
 			list.add(sup.get());
 		}
-		
 		return list;
 	}
-	
+
+	//消费型接口,Consumer<T>,对类型为T的对象应用操作.
 	@Test
 	public void test1(){
 		Consumer<String> con = (str) -> System.out.println(str.length());
-		con.accept("我大尚硅谷威武!");
+		con.accept("我大尚硅谷威武!1");
 	}
 	
 }

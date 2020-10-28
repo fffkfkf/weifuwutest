@@ -10,11 +10,8 @@ import java.util.stream.Stream;
 
 /*
  * 一、Stream 的操作步骤：
- * 
  * 1. 创建流
- * 
  * 2. 中间操作
- * 
  * 3. 终止操作(终端操作)
  */
 public class TestStreamAPI1 {
@@ -34,11 +31,13 @@ public class TestStreamAPI1 {
 		//③通过 Stream 中的静态方法 of()
 		Stream<Integer> stream4 = Stream.of(1,2,3,4,5,6,7);
 
+		System.out.println("---1-----");
 		//④创建无限流
 		//迭代
-		Stream<Integer> stream5 = Stream.iterate(0, (x) -> x + 2).limit(10);
-		stream5.forEach(System.out::println); //终止操作
+		Stream<Integer> stream5 = Stream.iterate(-3, (x) -> x + 2).limit(10);
+		stream5.forEach(System.out::print); //终止操作
 
+		System.out.println("---2-----");
 		//生成
 		Stream<Double> stream6 = Stream.generate(Math::random).limit(2);
 		stream6.forEach(System.out::println);
@@ -93,7 +92,7 @@ public class TestStreamAPI1 {
 		emps.stream()
 			.filter((e) -> {
 				System.out.println("短路"); //&& ||
-				return e.getAge() <= 35;
+				return e.getAge() >= 35;
 			})
 			.limit(1)
 			.forEach(System.out::println);
@@ -176,5 +175,11 @@ public class TestStreamAPI1 {
 			.map(Employee::getAge)
 			.sorted(Integer::compare)
 			.forEach(System.out::println);
+
+		System.out.println("---递减---");
+		emps.stream()
+				.map(Employee::getAge)
+				.sorted((x,y)-> -Integer.compare(x,y))
+				.forEach(System.out::println);
 	}
 }
