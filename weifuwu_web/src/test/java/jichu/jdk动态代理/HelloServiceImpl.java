@@ -8,7 +8,8 @@ package jichu.jdk动态代理;
 public class HelloServiceImpl implements HelloService {
 
     @Override
-    public void sayHello(String name) {
-        System.out.println("-------"+name);
+    public String sayHello(String name) {
+        System.out.println("---执行了HelloServiceImpl中的sayHello----"+name);
+        return name+"------HelloServiceImpl";
     }
 }

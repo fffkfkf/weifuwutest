@@ -7,6 +7,6 @@ package jichu.jdk动态代理;
  */
 public interface HelloService {
 
-void sayHello(String name);
+    String sayHello(String name);
 
 }
