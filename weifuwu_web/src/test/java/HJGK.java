@@ -19,12 +19,11 @@ public class HJGK {
 
     @Test
     public  void main23332()  {
-        try {
-            sss();
-        }catch (Exception e){
-            System.out.println("--111");
-        }
-        System.out.println("--222222");
+        String replace = "mapper.Path".replace(".", File.separator);
+        System.out.println(replace);
+        System.out.println(File.separator);
+
+
     }
 
     private void sss() {

@@ -65,19 +65,33 @@ public class CreatThread1 {
     public  void ssswThreadPool() {
         ExecutorService executorService = Executors.newCachedThreadPool();
         for (int a=0;a<100;a++){
-          /*  Future<?> submit = executorService.submit(new Worker2());
+/*
+ Future<?> submit = executorService.submit(new Worker2());
             try {
-                submit.get();
+                Object o = submit.get();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } catch (ExecutionException e) {
                 e.printStackTrace();
             }*/
             executorService.execute(new Worker2());
-
         }
         log.info(Thread.currentThread().getName());
+    }
 
+    /**
+     * 创建线程池
+     */
+    @Test
+    public  void ssswCallable() throws Exception {
+        ExecutorService executorService = Executors.newCachedThreadPool();
+        Worker3 worker3 = new Worker3();
+        for (int a=0;a<5;a++){
+            // submit 有三个重载的方法.
+            Future<String> future = executorService.submit(worker3);
+            System.out.println("future"+future.get());
+        }
+        executorService.shutdown();
     }
 
 }
