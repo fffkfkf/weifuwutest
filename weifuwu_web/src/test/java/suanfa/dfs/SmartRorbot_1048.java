@@ -1,5 +1,9 @@
 package suanfa.dfs;
 
+import com.sun.corba.se.impl.orbutil.graph.Graph;
+import com.sun.corba.se.impl.orbutil.graph.GraphImpl;
+import org.apache.commons.math3.geometry.spherical.twod.Vertex;
+
 import java.util.*;
 import java.awt.*;
 
@@ -11,6 +15,8 @@ import java.awt.*;
  */
 public class SmartRorbot_1048 {
 
+    public static void main(String[] args) {
 
+     }
 
 }
